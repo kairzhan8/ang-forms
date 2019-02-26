@@ -1,0 +1,27 @@
+<form [formGroup]="profileForm" class="loginForm">
+  <div class="basic">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" required>
+      <small *ngIf="!profileForm.valid">Write your name</small>
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" formControlName="surname">
+      <small *ngIf="profileForm.invalid">Write your surname</small>
+      <label for="age">Age:</label>
+      <input type="text" id="age" formControlName="age">
+      <small *ngIf="profileForm.invalid">Maximum lenght 3</small>
+  </div>
+  <div formGroupName="address">
+    <h2>Address:</h2>
+    <div class="address">
+      <label for="country">Country:</label>
+      <input type="text" id="country" formControlName="country">
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city">
+      <label for="street">Street:</label>
+      <input type="text" id="street" formControlName="street">
+      <label for="homeNumber">Home:</label>
+      <input type="text" id="homeNumber" formControlName="homeNumber">
+    </div>
+  </div>
+  <button type="submit" (click)="onSubmit()" [disabled]="!profileForm.valid">Save</button>
+</form>

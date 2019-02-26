@@ -1,0 +1,25 @@
+.loginForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .basic {
+    flex-direction: column;
+    display: flex;
+
+    small {
+      color:red;
+    }
+  }
+  .address {
+    flex-direction: column;
+    display: flex;
+
+  }
+}
+button {
+  width: 90px;
+  margin-top: 20px;
+  cursor: pointer;
+}
