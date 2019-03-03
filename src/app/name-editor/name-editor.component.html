@@ -2,13 +2,13 @@
   <div class="basic">
       <label for="name">Name:</label>
       <input type="text" id="name" formControlName="name" required>
-      <small *ngIf="!profileForm.valid">Write your name</small>
+      <small *ngIf="profileForm.controls['name'].invalid && profileForm.controls['name'].touched">Write your name</small>
       <label for="surname">Surname:</label>
       <input type="text" id="surname" formControlName="surname">
-      <small *ngIf="profileForm.invalid">Write your surname</small>
+      <small *ngIf="profileForm.controls['surname'].invalid && profileForm.controls['surname'].touched">Write your surname</small>
       <label for="age">Age:</label>
       <input type="text" id="age" formControlName="age">
-      <small *ngIf="profileForm.invalid">Maximum lenght 3</small>
+      <small *ngIf="profileForm.controls['age'].invalid && profileForm.controls['age'].touched">Maximum lenght 3</small>
   </div>
   <div formGroupName="address">
     <h2>Address:</h2>
